@@ -1,4 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
+import { render } from '@testing-library/angular';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
@@ -31,5 +32,10 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('taskbox app is running!');
+  });
+
+  it('should render the component', async () => {
+    const { getByText } = await render(AppComponent);
+    expect(getByText('Welcome'));
   });
 });
