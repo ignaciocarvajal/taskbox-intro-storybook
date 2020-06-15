@@ -16,7 +16,6 @@ import { Task } from '../models/task.model';
       <div class="title">
         <input type="text" [value]="task?.title" readonly="true" placeholder="Input title" />
       </div>
-      
       <div class="actions">
         <a *ngIf="task?.state !== 'TASK_ARCHIVED'" (click)="onPin(task.id)">
           <span class="icon-star"></span>
