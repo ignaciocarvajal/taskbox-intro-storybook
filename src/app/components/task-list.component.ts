@@ -19,6 +19,7 @@ import { Task } from '../models/task.model';
         <div class="subtitle-message">Sit back and relax</div>
       </div>
 
+      
       <div *ngIf="loading">
         <div *ngFor="let i of [1, 2, 3, 4, 5, 6]" class="loading-item">
           <span class="glow-checkbox"></span>
